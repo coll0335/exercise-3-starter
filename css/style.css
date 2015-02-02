@@ -104,31 +104,38 @@ body {
 /* line 43, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
 .navigation ul {
   margin: 0;
-  padding: 0; }
-  /* line 45, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+  padding: 0;
+  font-size: 0; }
+  /* line 46, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
   .navigation ul li {
-    list-style-type: none; }
-    /* line 47, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+    list-style-type: none;
+    display: inline-block;
+    width: 50%;
+    font-size: 18px; }
+    /* line 52, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
     .navigation ul li a {
+      transition: all 250ms linear;
       display: block;
-      padding: 0.5em 1em;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 2em 1em;
       text-align: center;
-      border-bottom: 1px solid #ccc;
-      text-decoration: none; }
-    /* line 54, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
-    .navigation ul li:first-child a {
-      border-top: 1px solid #ccc; }
+      text-decoration: none;
+      background-color: #0B3648; }
+      /* line 61, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+      .navigation ul li a:hover {
+        opacity: 0.8; }
 
-/* line 62, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+/* line 70, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
 .toggle-btn, .close-btn {
   color: #222;
   height: 40px;
   width: 40px; }
-  /* line 66, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+  /* line 74, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
   .toggle-btn i, .close-btn i {
     border: 1px solid #ccc;
     padding: 0.5em; }
-  /* line 70, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+  /* line 78, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
   .toggle-btn span, .close-btn span {
     text-indent: 100%;
     white-space: nowrap;
@@ -136,13 +143,13 @@ body {
     display: block; }
 
 @media only screen and (max-width: 60em) {
-  /* line 80, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+  /* line 88, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
   .site-wrapper {
     position: relative;
     overflow: hidden;
     width: 100%;
     z-index: 100; }
-    /* line 86, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+    /* line 94, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
     .site-wrapper .sliding-canvas {
       width: 100%;
       height: 100%;
@@ -151,16 +158,16 @@ body {
           -ms-transform: translateX(0);
               transform: translateX(0);
       transition: all 300ms ease-in-out; }
-    /* line 94, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+    /* line 102, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
     .site-wrapper[data-state="slide-open"] .sliding-canvas {
       -webkit-transform: translateX(-100%);
           -ms-transform: translateX(-100%);
               transform: translateX(-100%); }
-    /* line 98, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+    /* line 106, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
     .site-wrapper[data-state="slide-open"] {
       overflow: visible; }
 
-  /* line 105, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+  /* line 113, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
   .slide-menu {
     position: absolute;
     width: 100%;
@@ -169,4 +176,15 @@ body {
     bottom: 0;
     right: -100%;
     min-height: 600px; }
+ }
+
+@media only screen and (min-width: 60em) {
+  /* line 127, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+  .toggle-btn, .close-btn {
+    display: none; }
+
+  /* line 131, /Users/Mark/Documents/Mark/Year 3:3/Semester 2/Web Development/exercises/exercise-3-starter/scss/components/main */
+  .slide-menu {
+    positionL: static;
+    right: auto; }
  }

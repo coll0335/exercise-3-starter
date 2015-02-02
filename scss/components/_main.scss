@@ -42,17 +42,25 @@ body{
 
 .navigation ul {
   @include zero;
+  font-size: 0;
     li {
       list-style-type: none;
+      display:inline-block;
+      width: 50%;
+      font-size: 18px;
+
       a {
+      @include ease(all, 250ms, linear);
         display: block;
-        padding: .5em 1em;
+        text-transform:uppercase;
+        color: $text-reverse;
+        padding: 2em 1em;
         text-align: center;
-        border-bottom: 1px solid $light-grey;
         text-decoration: none;
+        background-color: $bg-color;
+      &:hover {
+        opacity: .8;
       }
-      &:first-child a {
-        border-top: 1px solid $light-grey;
       }
     }
 
@@ -110,7 +118,18 @@ body{
     bottom: 0;
     right: -100%;
     min-height: 600px;
-
   }
 
+}
+
+@media only screen and (min-width: 60em) {
+  .toggle-btn,
+  .close-btn {
+    display:none;
+  }
+
+  .slide-menu {
+    positionL:static;
+    right:auto;
+  }
 }
